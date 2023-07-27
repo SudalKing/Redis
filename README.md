@@ -25,3 +25,26 @@
 # 간단 예제
 ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/1d15c4c9-1e60-4a4a-a473-7d4c46324ab4)
 
+# Redis의 자료형
+ asdassda
+
+## Strings
+ - 가장 기본적인 데이터 타입
+ - 바이트 배열 저장(binary-safe)
+ - 바이너리로 변환할 수 있는 모든 데이터 저장 가능(JPG와 같은 파일등)
+ - 최대 크기는 512MB
+
+### Strings 주요 명령어
+   |명령어|기능|예제|
+   |:---:|:---:|:---:|
+   |SET|특정 키에 문자열 값 저장|SET say hello|
+   |GET|특정 키의 문자열 값을 받아옴|GET say|
+   |INCR|특정 키의 값을 Integer로 취급해 1증가|INCR mycount|
+   |DECR| // 1 감소|DECR mycount|
+   |MSET|여러 키에 대한 값을 한번에 저장|MSET mine milk yours coffee|
+   |MGET|여러 키에 대한 값을 한번에 받아옴|MGET mine yours|
+   
+
+## 
+
+
