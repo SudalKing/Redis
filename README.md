@@ -44,6 +44,7 @@
    |MSET|여러 키에 대한 값을 한번에 저장|MSET mine milk yours coffee|
    |MGET|여러 키에 대한 값을 한번에 받아옴|MGET mine yours|
    
+<br>
 
 ## Lists
  - Linked-list 형태의 자료구조 (조회는 느리지만 추가/삭제가 빠름)
@@ -59,7 +60,9 @@
    |LRANGE|리스트의 특정 범위 반환|LRANGE mylist 0-1|
    |LPOP|리스트의 왼쪽(head)에서 값을 삭제하고 반환|LPOP mylist|
    |RPOP|리스트의 오른쪽(tail)에서 값을 삭제하고 반환|RPOP mylist|
-   
+
+ <br>
+ 
 ## Sets
  - 순서가 없는 유니크한 값의 집합
  - 검색이 빠름
@@ -74,22 +77,23 @@
    |SCARD|아이템 개수 반환|SCARD myset|
    |SMEMBERS|저장된 아이템들 반환|SMEMBERS myset|
    |SISMEMBER|특정 값이 Set에 포함되어 있는지를 반환|SISMEMBER myset apple|
-   
 
-## 
- - 
- - 
+ <br>
+
+## Hashes
+ - 하나의 key 하위에 여러개의 field-value 쌍을 저장
+ - 여러 필드를 가진 객체를 저장하는 것
+ - HINCRBY 명령어를 사용해 카운터로 활용 가능(각각의 필드를 따로 사용할 때 효율↑)
 
 
 ###  주요 명령어
    |명령어|기능|예제|
    |:---:|:---:|:---:|
-   ||||
-   ||||
-   ||||
-   ||||
-   ||||
-   ||||
+   |HSET|한개 또는 다수의 필드에 값을 저장|HSET user1 name bear age 10|
+   |HGET|특정 필드의 값 반환|HGET user1 name|
+   |HMGET|한개 이상의 필드 값을 반환|HMGET user1 name age|
+   |HINCRBY|특정 필드의 값을 Integer로 취급하여 숫자를 증가|HINCRBY user1 viewcount1|
+   |HDEL|한개 이상의 필드를 삭제|HDEL user1 name age|
 
 
    
