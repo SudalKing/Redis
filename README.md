@@ -94,10 +94,29 @@
    |HMGET|한개 이상의 필드 값을 반환|HMGET user1 name age|
    |HINCRBY|특정 필드의 값을 Integer로 취급하여 숫자를 증가|HINCRBY user1 viewcount1|
    |HDEL|한개 이상의 필드를 삭제|HDEL user1 name age|
+   |HKEYS|모든 키값 조회|HKEYS user1|
 
-
+<br>
    
-## 
+## Sorted Sets
+ - Set과 유사하게 유니크한 값의 집합
+ - 각 값은 연관된 score를 가지고 정렬되어 있음
+ - 정렬된 상태이기에 빠르게 최소/최대값을 구할 수 있음
+ - 순위 계산, 리더보드 구현 등에 활용
+
+
+###  주요 명령어
+   |명령어|기능|예제|
+   |:---:|:---:|:---:|
+   |ZADD|한개 또는 다수의 값을 추가 또는 업데이트|ZADD myrank 10 apple 20 banana|
+   |ZRANGE|특정 범위의 값을 반환(오름차순 정렬)|ZRANGE myrank 0 1|
+   |ZRANK|특정 값의 위치(순위)를 반환(오름차순)|ZRANK myrank apple|
+   |ZREVRANK|                    // (내림차순)|ZREVRANK myrank apple|
+   |ZREM|한 개 이상의 값을 삭제|ZREM myrank apple|
+
+<br>
+   
+## Bitmaps
  - 
  - 
 
@@ -111,8 +130,6 @@
    ||||
    ||||
    ||||
-
-
    
 ## 
  - 
