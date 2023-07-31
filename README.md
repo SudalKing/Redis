@@ -117,20 +117,21 @@
 <br>
    
 ## Bitmaps
- - 
- - 
+ - 비트 벡터를 사용해 N개의 Set에 공간 효율적으로 저장(boolean 데이터 저장시 굉장히 효율적)
+ - 하나의 비트맵이 가지는 공간은 약42억(2^32 - 1) 8byte
+ - 비트 연산 가능
 
 
 ###  주요 명령어
    |명령어|기능|예제|
    |:---:|:---:|:---:|
-   ||||
-   ||||
-   ||||
-   ||||
-   ||||
-   ||||
-   
+   |SETBIT|비트맵의 특정 오프셋의 값을 변경|SETBIT visit 10 1|
+   |GETBIT|비트맵의 특정 오프셋의 값을 반환|GETBIT visit|
+   |BITCOUNT|비트맵에서 set(1) 상태인 비트의 개수를 반환|BITCOUNT visit|
+   |BITOP|비트맵들간의 비트 연산을 수행하고 결과를 비트맵에 저장|BITOP AND result today yesterday|
+
+<br>
+  
 ## 
  - 
  - 
