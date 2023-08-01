@@ -34,12 +34,14 @@
   - 세션을 손쉽게 생성하고 관리할 수 있게 해주는 인터페이스
   - UUID로 세션ID를 생성
   - JSESSOINID라는 이름의 cookie를 설정해 내려줌
-  -ㅁㄴㅇ
+   ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/b67e46d6-73e7-4579-962b-30ea2f9cce76)
 
-###  주요 명령어
-   |명령어|기능|예제|
-   |:---:|:---:|:---:|
-   |PFADD|HyperLogLog에 값들을 추가|PFADD visit Jay Peter Jane|
-   |PFCOUNT|HyperLogLog에 입력된 값들의 cardinality(유일값의 수) 반환|PFCOUNT visit|
-   |PFMERGE|다수의 HyperLogLog 병합|PFMERGE result visit1 visit2|
-   
+<br>
+
+#### SpringBoot 터미널을 통해 여러 대의 서버 띄우기
+ - build/libs 파일로 이동해
+   ```
+   $java -Dserver.port=[포트번호] -jar [실행할 jar파일]
+   ```
+ ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/7de8ab59-9f18-4a6f-a07b-b60c926d0624)
+
