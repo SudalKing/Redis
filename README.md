@@ -15,7 +15,7 @@
 ~$ docker stop [이미지 이름]
 ~$ docker start [이미지 이름]
 ~$ docker rm [이미지 이름] (이미지 삭제)
-~$ docker exec -it my-redis /bin/sh (쉘에서 docker 실행-> 컨테이너 진입)
+~$ docker exec -it [이미지 이름] /bin/sh (쉘에서 docker 실행-> 컨테이너 진입)
 # redis-cli (redis client 실행)
 
 ```
@@ -132,18 +132,17 @@
 
 <br>
   
-## 
- - 
- - 
+## HyperLogLog
+ - 유니크한 갑싀 개수를 효율적으로 얻을 수 있음
+ - 확률적 자료구조로서 오차가 있으며, 매우 큰 데이터를 다룰 때 사용
+ - 2^64 개의 유니크 값을 계산 가능
+ - 12KB까지 메모리를 사용하며 0.81%의 오차율을 허용
 
 
 ###  주요 명령어
    |명령어|기능|예제|
    |:---:|:---:|:---:|
-   ||||
-   ||||
-   ||||
-   ||||
-   ||||
-   ||||
+   |PFADD|HyperLogLog에 값들을 추가|PFADD visit Jay Peter Jane|
+   |PFCOUNT|HyperLogLog에 입력된 값들의 cardinality(유일값의 수) 반환|PFCOUNT visit|
+   |PFMERGE|다수의 HyperLogLog 병합|PFMERGE result visit1 visit2|
    
