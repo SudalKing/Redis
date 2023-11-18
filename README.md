@@ -46,4 +46,36 @@
     + FIFO(First In First Out): 먼저 들어온 데이터 삭제
 
 
-   
+## 예제
+
+ - sleep을 통해 외부에서 api 호출에 시간이 걸리는 상황을 가정
+   ```
+   public String getUserName(String userId) {
+        // 외부 서비스 혹은 db 호출
+        // sleep 을 걸어 캐싱 효과 확인
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+
+        }
+        return "";
+    }
+
+    public int getUserAge(String userId) {
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+
+        }
+        return 0;
+    }
+   ```
+   ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/198d82cc-754f-436f-8e98-aaf1b96c3a1c)
+
+
+- 캐싱 지정
+  - 5초동안 캐시 저장 <br>
+  ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/d8c53cab-0740-436d-aae3-4c5fe4e93cd0)
+  ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/8a32760d-a6af-4b01-862e-bf8e612864aa)
+
+
