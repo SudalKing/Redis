@@ -95,4 +95,7 @@
  - CacheManager를 @Bean으로 등록해 Custom cache manager 구현
  - 5초후 똑같이 캐시 삭제
    ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/a1abed60-aa83-4bfb-8433-bc41485e90b3)
+   ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/d8a3d03c-c44e-4084-a235-95e1b5159569)
 
+## 결론
+ - RedisTemplate의 캐시를 사용하게 되면 비즈니스 로직에 캐시를 위한 코드가 섞이게 되며 이는 코드의 가독성과 응집력을 저하시키고 지금은 단순한 String class 였지만 만약 Object를 사용하게 된다면 이를 처리하기 위한 추가 코드가 들어가므로 두 번째 방법인 Spring에서 제공하는 캐시 인터페이스를 직접 구현해 사용하는 편을 권장
