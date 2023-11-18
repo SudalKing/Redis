@@ -75,13 +75,23 @@
 
 - 캐싱 지정
   - 5초동안 캐시 저장
-  - 캐시된 데이터를 사용하게 되면 메소드 호출 자체를 안함 <br>
+  - 캐시된 데이터를 사용하게 되면 메소드 호출 자체를 안함
+  - 현재 getUserName() 메소드만 캐시되어 약 0.5초 소요 <br>
   ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/d8c53cab-0740-436d-aae3-4c5fe4e93cd0)
   ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/8a32760d-a6af-4b01-862e-bf8e612864aa)
 
 ## Spring에서 제공하는 캐시 추상화
  - CacheManager를 통해 일반적인 캐시 인터페이스 구현
  - 메소드에 캐시를 손쉽게 적용 가능
+ - redis 캐시 구현체 사용 설정
+ - getUserName(), getUserAge() 둘 다 캐시되어 매우 빠름
    
+   ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/17852c40-649d-4454-828a-9eb122ff03e4)
+   ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/7a6ad47f-00f2-419e-8c69-6e1b179c846b)
+   ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/e3e11cd2-63b8-4d6e-be4e-76b5eaf17a80)
+   ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/048e510f-dd8c-4452-8554-42467bb0a55f)
 
+### Custom Cache
+ - CacheManager를 @Bean으로 등록해 Custom cache manager 구현
+   ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/a1abed60-aa83-4bfb-8433-bc41485e90b3)
 
