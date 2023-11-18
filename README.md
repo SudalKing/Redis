@@ -74,8 +74,14 @@
 
 
 - 캐싱 지정
-  - 5초동안 캐시 저장 <br>
+  - 5초동안 캐시 저장
+  - 캐시된 데이터를 사용하게 되면 메소드 호출 자체를 안함 <br>
   ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/d8c53cab-0740-436d-aae3-4c5fe4e93cd0)
   ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/8a32760d-a6af-4b01-862e-bf8e612864aa)
+
+## Spring에서 제공하는 캐시 추상화
+ - CacheManager를 통해 일반적인 캐시 인터페이스 구현
+ - 메소드에 캐시를 손쉽게 적용 가능
+   
 
 
