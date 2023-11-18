@@ -31,6 +31,7 @@ public class RedisCacheConfig {
         return RedisCacheManager
                 .RedisCacheManagerBuilder
                 .fromConnectionFactory(connectionFactory)
+                .cacheDefaults(configuration)
                 .withInitialCacheConfigurations(configMap)
                 .build();
     }
