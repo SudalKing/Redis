@@ -93,5 +93,6 @@
 
 ### Custom Cache
  - CacheManager를 @Bean으로 등록해 Custom cache manager 구현
+ - 5초후 똑같이 캐시 삭제
    ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/a1abed60-aa83-4bfb-8433-bc41485e90b3)
 
