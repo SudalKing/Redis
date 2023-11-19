@@ -1,27 +1,18 @@
-# 캐싱(Sorted-Set)
- - Redis의 Sorted-Set 성능 테스트
-
-<br>
-
-## 테스트
- ### 100만개의 무작위 숫자 삽입 후 Collections.sort() 이용 <br>
-   ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/78902386-4b2e-45ca-90b8-5011cfb1f19f) <br>
-   ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/dc096736-2948-49fa-aa2e-63d89381c7b1)
+# Pub/Sub
+ - Redis를 미들웨어로 사용하여 서버 사이의 메세지 중계
 
    <br>
    
-### Redis <br>
-   #### 1. 캐시데이터 삽입 <br>
-   ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/8f0e8e4c-4a26-4c78-b6f6-eceaf7c0ffbf) <br>
-   ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/e652b56c-9de4-48d4-8550-af6b186b9480) <br>
-   ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/77283793-8f22-4752-b1df-2aaf4743c642) <br>
-   
-   #### 2. 성능 비교 <br>
-   ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/ca66de85-ecaa-454b-93fe-e3e55e5f6d91) <br>
-   ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/788774b7-4019-4340-92c3-57a69b64ad20) <br>
+## 실행 <br>
+   ### 1. Redis -> Client(Pub) <br>
+   ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/6dd3b14b-90d2-4e83-8ec7-e7611809bd12) <br>
+   ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/1d329300-e947-47e3-9e5a-e04b8284b86e) <br>
 
+ 
+   ### 2. Client -> Redis(Sub) <br>
+   ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/99339ffe-9ad9-42b8-8af0-8433b720b760) <br>
 
    <br>
    
 ## 결론
- - 
+ - Redis를 활용하면 채팅방같은 Pub/Sub 기능을 아주 간단하게 구현 가능
