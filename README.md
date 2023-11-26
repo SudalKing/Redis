@@ -1,5 +1,6 @@
-# Backup
- - Redis를 활용한 백업방식
+# Cluster
+ - Redis Cluster
+ ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/71da8e13-99ea-48ed-852f-505a7fae9de0)
 
    <br>
    
