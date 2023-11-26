@@ -38,12 +38,14 @@
 
  ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/f6fa033f-545b-44df-8ccc-3afa526de949) <br>
 
+## 4. Redis Sentinel <br>
+
+![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/95739e57-1f40-4d3b-8625-aa33237f3962) <br>
+![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/740c0b2c-7e2b-4c0b-9be2-de99ba1940eb) <br>
+![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/7505da32-3a26-42d0-8dd4-5a93f81b2e0a) <br>
 
 
 ## 번외. Docker-Compose <br>
 
  ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/879be561-94b6-49f8-9bad-b73083831107) <br>
 
-   
-## 결론
- - Redis를 활용하면 채팅방같은 Pub/Sub 기능을 아주 간단하게 구현 가능
