@@ -1,52 +1,20 @@
-# Cluster
- - Redis Cluster
- ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/71da8e13-99ea-48ed-852f-505a7fae9de0)
+# Cluster <br>
 
-   <br>
+ ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/71da8e13-99ea-48ed-852f-505a7fae9de0) <br>
+ ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/32658dd1-cdd5-423a-a1f1-07f9f71c4357) <br>
+ ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/94dbe3d7-5c91-419f-84e0-89b9f392de6c) <br>
+ 
    
-## 1. RDB <br>
-  
-  ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/5a6066d4-3bc4-4d3c-89e9-4bd487bb9ff8) <br>
-    
-  - 장점: 파일 사이즈가 작음, fork를 사용해 child를 만들어 백업하므로 현재 성능에 영향x, 데이터 스냅샷 방식으로 빠른 복구 가능
-  - 단점: 데이터 무결성이나 정합성에 대한 요구가 크지 않은 경우 좋음, fork를 사용하기에 시간이 걸릴 수 있고 CPU 메모리 자원을 많이 소모, 
-            스냅샷을 저장하는 시점(저장주기) 사이의 데이터 변경사항이 유실될 수 있음
+## 데이터 분산과 key 관리
+ 
+ ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/a51bf5e7-e7a1-4b76-941c-37b403ec0aae) <br>
+ ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/f4993b84-b92a-48f9-86d1-7663fc98f24b) <br>
 
-   <br>
-   
-   ### 1-1 Docker를 사용한 Redis 설정 파일 적용 <br>
-   ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/18acf3a6-592a-40fc-96af-f9252ec5e42c) <br>
-
-## 2. AOF <br>
-
- ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/4b4bd01d-5372-408f-95ba-519ef1f7a927) <br>
-
- - 장점: 모든 변경이 기록되어 안정적, 백업 파일이 손상될 위험이 적음, 수행된 명령어가 저장되어 사람이 보고 이해할 수 있고 수정도 가능
- - 단점: RDB 대비 파일이 커짐, 백업&복구 속도가 느림 
-
-<br>
-
-### 2-1 AOF 설정 <br>
-![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/5edd5206-1014-4f1b-9fce-13c981af8a85) <br>
-
-### 2-2 fsync 정책
-![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/2647b13a-327e-4a84-89b7-86493702ebea) <br>
+ - 재시도가 비효율적으로 보일 수 있지만 한 번 table을 만들게 되면 node의 변경이 일어나지 않는 이상 거의 변동이 없고 캐싱이 되기때문에 오히려 효율적이라 볼 수 있음
+ ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/aa33d8c1-4582-4241-90e4-3dbaa0dff770) <br>
+ ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/d2c368e2-2190-4d05-bca6-b9d9897a23e1) <br>
+ ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/7723c038-c7a1-4947-8f3a-3d87d0917127) <br>
+ 
 
 
-## 3. Redis replication <br>
-
- ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/73c921bc-fb44-4a79-af52-f400ab6ad680) <br>
-
- ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/f6fa033f-545b-44df-8ccc-3afa526de949) <br>
-
-## 4. Redis Sentinel <br>
-
-![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/95739e57-1f40-4d3b-8625-aa33237f3962) <br>
-![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/740c0b2c-7e2b-4c0b-9be2-de99ba1940eb) <br>
-![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/7505da32-3a26-42d0-8dd4-5a93f81b2e0a) <br>
-
-
-## 번외. Docker-Compose <br>
-
- ![image](https://github.com/SudalKing/Spring_Redis/assets/87001865/879be561-94b6-49f8-9bad-b73083831107) <br>
-
+ 
