@@ -42,7 +42,7 @@
  - Expiration: 각 데이터에 TTL(Time To Live)을 설정
  - Eviction Algorithm: 공간을 확보해야 할 경우 어떤 데이터를 삭제할지 결정
     + LRU(Least Recently Used): 가장 오랫동안 사용되지 않은 데이터를 삭제
-    + LFU(Least Frequently Used): 가장 적게 사용된 데이터를 삭제(최근데 사용되었더라도)
+    + LFU(Least Frequently Used): 가장 적게 사용된 데이터를 삭제(최근에 사용되었더라도)
     + FIFO(First In First Out): 먼저 들어온 데이터 삭제
 
 
